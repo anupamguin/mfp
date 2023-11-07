@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import {
   StylesProvider,
   createGenerateClassName,
@@ -13,14 +13,13 @@ const generateClassName = createGenerateClassName({
 
 export default () => {
   return (
-    <Router>
+    <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
         <div>
           <Header />
           <MarketingApp />
         </div>
       </StylesProvider>
-      s
-    </Router>
+    </BrowserRouter>
   );
 };
